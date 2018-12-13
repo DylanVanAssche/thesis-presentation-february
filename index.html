@@ -23,15 +23,15 @@
             <h2>Publishing live Open Data</h2>
             <p>By <a href="https://dylanvanassche.be">Dylan Van Assche</a></p>
             <figure>
-                <img class="cover" src="pictures/cover.jpg" alt="Broken fence">
+                <img class="cover" src="images/cover.jpg" alt="Broken fence">
                 <figcaption class="copyright right white">
                     <a href="https://www.pexels.com/photo/gray-wire-fence-1133499/">© Johannes Plenio</a>
                 </figcaption>
             </figure>
         </div>
         <div id="flex-affiliation">
-            <img src="pictures/kuleuven.png" class="logo" alt="KU Leuven logo">
-            <img src="pictures/openknowledge.png" class="logo" alt="Open Knowledge Belgium logo">
+            <img src="images/kuleuven.png" class="logo" alt="KU Leuven logo">
+            <img src="images/openknowledge.png" class="logo" alt="Open Knowledge Belgium logo">
         </div>
 
         <style>
@@ -108,13 +108,13 @@
     <!-- Why intermodal route planning? -->
     <section class="slide">
         <h2>Why intermodal route planning?</h2>
-        <ol>
+        <!--<ol>
             <li>Lets you reveal list items one by one</li>
             <li class="next">To keep some key points</li>
             <li class="next">In secret from audience</li>
             <li class="next">But it will work only once</li>
             <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        </ol>-->
     </section>
 
     <!-- Research questions -->
@@ -129,7 +129,7 @@
     <section class="slide" id="state-of-the-art">
         <h2>State of the art</h2>
         <figure>
-            <img class="cover" src="pictures/state-of-the-art.jpg" alt="State of the art">
+            <img class="cover" src="images/state-of-the-art.jpg" alt="State of the art">
             <figcaption class="copyright right white">
                 <a href="https://www.pexels.com/photo/light-trails-on-highway-at-night-315938/">© Pixabay</a>
             </figcaption>
@@ -145,43 +145,49 @@
     <!-- Why do we choose for JSON as data format and HTTP as the transport protocol for Open Data? -->
     <section class="slide">
         <h2>Transporting real time data</h2>
-        <ol>
+        <!--<ol>
             <li>Lets you reveal list items one by one</li>
             <li class="next">To keep some key points</li>
             <li class="next">In secret from audience</li>
             <li class="next">But it will work only once</li>
             <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        </ol>-->
     </section>
 
     <!-- How will HTTP be cost-efficient for updates? HTTP caching! Use an example. -->
     <section class="slide">
-        <h2>Cost-efficiency?</h2>
-        <ol>
+        <h2>Focus on cost-efficiency</h2>
+        <!--<ol>
             <li>Lets you reveal list items one by one</li>
             <li class="next">To keep some key points</li>
             <li class="next">In secret from audience</li>
             <li class="next">But it will work only once</li>
             <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        </ol>-->
     </section>
 
     <!-- Connection Scan Algorithm: What?, Why?, Show Linked Connections visualisation, influence of updates on CSA. -->
     <section class="slide">
         <h2>Connection Scan Algorithm</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        <div id="map"></div>
+        <style>
+            #map {
+                width: 100%;
+                height: 70%;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        <script src="https://linkedconnections.org/js/jquery.min.js"></script>
+        <script src="https://linkedconnections.org/js/leaflet.js"></script>
+        <script src="https://linkedconnections.org/js/lc-client.js"></script>
+        <script src="https://linkedconnections.org/js/main.js"></script>
     </section>
 
     <section class="slide" id="revised-planning">
         <h2>Revised planning</h2>
         <figure>
-            <img class="cover" src="pictures/planning.jpg" alt="Orange typewriter on a wooden table close-up">
+            <img class="cover" src="images/planning.jpg" alt="Orange typewriter on a wooden table close-up">
             <figcaption class="copyright right white">
                 <a href="https://www.pexels.com/photo/orange-and-green-pen-on-graphing-notepad-131979/">© freestocks.org</a>
             </figcaption>
@@ -193,18 +199,18 @@
         <h2>Revised planning</h2>
         <figure>
             <div class="columns two">
-                <img src="pictures/gantt.png" alt="Revised planning for the second semester">
+                <img src="images/gantt.png" alt="Revised planning for the second semester">
                 <ol>
-		    <li class="next">Implementing (2 months)</li>
-		    <li class="next">Benchmarking (1 month)</li>
+		    <li class="next">Implementing <br> (2 months)</li>
+		    <li class="next">Benchmarking <br> (1 month)</li>
 		    <li class="next">Writing the final text <br> (1,5 months)</li>
 		</ol>
             </div>
         </figure>
         <style>
             #planning img {
-                width: auto;
-                height: 40vh;
+                width: 100%;
+                height: 100%;
             }
             #planning figure {
                 text-align: center;
@@ -221,7 +227,7 @@
         <h2>Are there any questions?</h2>
         <p>Thank you for your attention!</p>
         <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Broken fence">
+            <img class="cover" src="images/cover.jpg" alt="Broken fence">
             <figcaption class="copyright right white">
                 <a href="https://www.pexels.com/photo/gray-wire-fence-1133499/">© Johannes Plenio</a>
             </figcaption>
@@ -254,6 +260,7 @@
             #flex-center p a {
                 color: white;
             }
+
         </style>
     </section>
 
