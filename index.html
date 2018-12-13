@@ -19,32 +19,38 @@
     </header>
 
     <section class="slide" id="start">
-        <div id="flex-center">
-        <h2>Publishing live Open Data</h2>
-        <p>Brought to you by <a href="https://dylanvanassche.be">Dylan Van Assche</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://www.pexels.com/photo/gray-wire-fence-1133499/">© Johannes Plenio</a>
-            </figcaption>
-        </figure>
+        <div id="flex-title">
+            <h2>Publishing live Open Data</h2>
+            <p>By <a href="https://dylanvanassche.be">Dylan Van Assche</a></p>
+            <figure>
+                <img class="cover" src="pictures/cover.jpg" alt="Broken fence">
+                <figcaption class="copyright right white">
+                    <a href="https://www.pexels.com/photo/gray-wire-fence-1133499/">© Johannes Plenio</a>
+                </figcaption>
+            </figure>
         </div>
+        <div id="flex-affiliation">
+            <img src="pictures/kuleuven.png" class="logo" alt="KU Leuven logo">
+            <img src="pictures/openknowledge.png" class="logo" alt="Open Knowledge Belgium logo">
+        </div>
+
         <style>
-            #flex-center {
-                height: 100%;
+            #flex-title {
+                height: 70%;
                 display: flex;
                 justify-content: center; /* align horizontal */
                 align-items: center; /* align vertical */
                 flex-direction: column;
             }
-            #flex-center h2 {
+
+            #flex-title h2 {
                 margin: 0 0 0 0;
                 color: white;
                 text-align: center;
                 font-size: 70px;
             }
 
-            #flex-center p {
+            #flex-title p {
                 margin: 15px 0 0;
                 text-align: center;
                 color: white;
@@ -52,8 +58,24 @@
                 font-size: 20px;
             }
 
-            #flex-center p a {
+            #flex-title p a {
                 color: white;
+            }
+
+            #flex-affiliation {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+            }
+
+            #flex-affiliation img {
+                height: 50%;
+            }
+
+            .logo {
+                margin: 0 0 0 20px;
             }
         </style>
     </section>
@@ -194,12 +216,12 @@
     </section>
 
     <!-- The end: questions -->
-    <section class="slide" id="start">
+    <section class="slide" id="end">
         <div id="flex-center">
         <h2>Are there any questions?</h2>
         <p>Thank you for your attention!</p>
         <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+            <img class="cover" src="pictures/cover.jpg" alt="Broken fence">
             <figcaption class="copyright right white">
                 <a href="https://www.pexels.com/photo/gray-wire-fence-1133499/">© Johannes Plenio</a>
             </figcaption>
@@ -213,6 +235,7 @@
                 align-items: center; /* align vertical */
                 flex-direction: column;
             }
+
             #flex-center h2 {
                 margin: 0 0 0 0;
                 color: white;
