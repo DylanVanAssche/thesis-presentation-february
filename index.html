@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Thesis Presentation June 2019</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
@@ -82,13 +81,14 @@
         </style>
     </section>
 
-    <!-- Part 1: Background and goals (40 %) -->
-    <!-- Ask question to the public about their public transport usage -->
 
-    <!-- Information about your public transport trip -->
+
+    <!-- Part 1: Introduction -->
+    <!-- Intro -->
     <section class="slide">
-        <h2>Information during your trip</h2>
-        <div class="columns three" id="panel">
+        <h2>Are you sure you're going to make it?</h2>
+        <!-- WIP TODO -->
+        <!--<div class="columns three" id="panel">
             <div class="next">
                 <p>Information panels</p>
                 <img src="images/information-panel-nmbs.jpg" alt="Information panel NMBS" />
@@ -109,89 +109,105 @@
             #panel div p {
                 text-align: center
             }
-        </style>
-    </section>
-
-    <!-- How it's done today -->
-    <section class="slide">
-        <h2>Improving public transport data publishing</h2>
-        <!--<ol>
-            <li>Each agency has it's own terms and format</li>
-            <li class="next">Linked Connections wants to standardise the publication</li>
-            <li class="next">Data should be published under the terms of Open Data</li>
-        </ol>-->
-        <div class="box" id="box1">
-            <p>Each agency has it's own terms and format</p>
-        </div>
-        <div class="next">
-            <div class="columns two" id="spacing">
-                <svg class="svg-arrow">
-                    <line x1="95%" y1="5%" x2="50%" y2="95%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
-                </svg>
-
-                <svg class="svg-arrow">
-                    <line x1="5%" y1="5%" x2="50%" y2="95%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
-                </svg>
-            </div>
-            <div class="columns two">
-                <div class="box" id="box2">
-                    <p>Linked Connections wants to standardise the publication</p>
-                </div>
-                <div class="box" id="box3">
-                    <p>Data should be published under the terms of Open Data</p>
-                </div>
-            </div>
+        </style>-->
+        <div id="panel">
+            <img src="images/intro-1.png" alt="Intro" />
+            <a href="https://www.vrt.be/vrtnws/nl/2017/09/19/haalt-het-openbaar-vervoer-ons-massaal-uit-de-file-/">VRT NWS (2017)</a>
         </div>
         <style>
-            .box {
-                margin-top: 1%;
-                margin-bottom: 1%;
-                margin-left: auto; /* Center DIV */
-                margin-right: auto;
-                border: 2px solid black;
-                display: flex;
-                justify-content: center; /* align horizontal content */
-                align-items: center; /* align vertical content */
-                flex-direction: column;
-                border-radius: 10%;
-            }
-            .box p {
-                margin: 0 0 0 0;
-                text-align: center;
-            }
-            #box1 {
-                width: 60%;
-            }
-            #box2 #box3 {
-                width: 100%;
-            }
-            #spacing {
-                height: 15vh;
-            }
-            .svg-arrow {
-                width: 100%;
-                height: 100%;
+            #panel img {
+                height: 37.5vh;
             }
         </style>
     </section>
-    <!-- Ask the public what they know about Open Data -->
 
-    <section class="slide" id="state-of-the-art">
-        <h2>State of the art</h2>
+    <!-- Why Linked Connections? Google already does this! => Research question -->
+    <section class="slide">
+        <h2>Google has been doing this for years</h2>
+        <div class="columns two">
+            <img id="concurrent" src="images/concurrent.jpg" alt="Google Maps can already do the same?">
+            <h3 class="next" id="goal">How can we publish Linked Connections in a more efficient way?</h3>
+        </div>
+        <style>
+            #concurrent {
+                width: 100%;
+            }
+            #goal {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <!-- Research questions -->
+    <section class="slide" id="research-questions">
+        <h2>Research questions</h2>
+        <ol>
+            <li>How can we keep a cache for route planners up to date in a cost-efficient way for both Open
+Data publishers and consumers?</li>
+            <li>How can we consume real time Open Data updates in route planner algorithms in an efficient
+way?</li>
+        </ol>
+    </section>
+
+
+
+    <!-- Part 2: Specifications high level -->
+    <section class="slide" id="specifications">
+        <h2>Specifications</h2>
         <figure>
-            <img class="cover" src="images/state-of-the-art.jpg" alt="State of the art">
+            <img class="cover" src="images/specifications.jpg" alt="Specifications">
             <figcaption class="copyright right white">
-                <a href="https://www.pexels.com/photo/light-trails-on-highway-at-night-315938/">© Pixabay</a>
+                <a href="https://www.pexels.com/photo/person-holding-pen-point-on-blueprint-1537008">© Rawpixel.com</a>
             </figcaption>
         </figure>
         <style>
-            #state-of-the-art h2 {
+            #specifications h2 {
                 color: white;
             }
         </style>
     </section>
-
-    <!-- Part 2: Analysing the problem and the start of the implementation (50 %) -->
+    
+    <!-- Goals for the user -->
+    <section class="slide" id="goals">
+        <h2>Goals</h2>
+        <div class="wrapper1">
+            <div class="wrapper2 next">
+                <div>Informing commuters<br> in real time</div>
+                <div><img src="images/informing-real-time.jpg" alt="cost" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div>Alternatives based<br> on real time data</div>
+                <div><img src="images/alternatives.jpg" alt="cost" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div>Cost-efficient for publishers and consumers</div>
+                <div><img src="images/cost.jpg" alt="cost" /></div>
+            </div>
+        </div>
+        <style>
+            .wrapper1 {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                text-align: center;
+            }
+            .wrapper2 {
+                display: grid;
+                grid-template-rows: 50% 50%;
+            }
+            #panel {
+                display: grid;
+                grid-template-colums: 200px 200px 200px;
+            }
+            .wrapper2 div img{
+                width: 80%;
+                height: 15vh;
+            }
+            #panel div p {
+                text-align: center
+            }
+        </style>
+    </section>
+    
     <!-- Explaining Open Data -->
     <section class="slide">
         <h2>Open Data</h2>
@@ -215,22 +231,24 @@
         </style>
     </section>
 
-    <!-- Why Linked Connections? Google already does this! => Research question -->
-    <section class="slide">
-        <h2>Google has been doing this for years</h2>
-        <div class="columns two">
-            <img id="concurrent" src="images/concurrent.jpg" alt="Google Maps can already do the same?">
-            <h3 class="next" id="goal">How can we publish Linked Connections in a more efficient way?</h3>
-        </div>
+
+
+    <!-- Part 3: Implementation -->
+    <section class="slide" id="implementation">
+        <h2>Implementation</h2>
+        <figure>
+            <img class="cover" src="images/state-of-the-art.jpg" alt="State of the art">
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/light-trails-on-highway-at-night-315938/">© Pixabay</a>
+            </figcaption>
+        </figure>
         <style>
-            #concurrent {
-                width: 100%;
-            }
-            #goal {
-                width: 100%;
+            #implementation h2 {
+                color: white;
             }
         </style>
     </section>
+
 
     <!-- Why do we choose for JSON as data format and HTTP as the transport protocol for Open Data? -->
     <section class="slide">
@@ -244,7 +262,7 @@
                     <p>Readable by humans <br> and machines</p>
                 </div>
             </div>
-            <div class="columns two" id="spacing2">
+            <div class="columns two" id="spacing">
                 <svg class="svg-arrow">
                     <line x1="50%" y1="10%" x2="80%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
                 </svg>
@@ -258,7 +276,7 @@
             <p><b>HTTP &amp; JSON</b></p>
         </div>
         <div class="next">
-            <div class="columns two" id="spacing2">
+            <div class="columns two" id="spacing">
                 <svg class="svg-arrow">
                     <line x1="80%" y1="10%" x2="50%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
                 </svg>
@@ -277,6 +295,33 @@
             </div>
         </div>
         <style>
+            .box {
+                margin-top: 1%;
+                margin-bottom: 1%;
+                margin-left: auto; /* Center DIV */
+                margin-right: auto;
+                border: 2px solid black;
+                display: flex;
+                justify-content: center; /* align horizontal content */
+                align-items: center; /* align vertical content */
+                flex-direction: column;
+                border-radius: 10%;
+            }
+            .box p {
+                margin: 0 0 0 0;
+                text-align: center;
+            }
+            .svg-arrow {
+                width: 100%;
+                height: 100%;
+            }
+
+            #box1 {
+                width: 60%;
+            }
+            #box2 #box3 {
+                width: 100%;
+            }
             #box4 {
                 width: 87.5%;
                 font-size: 90%;
@@ -297,30 +342,12 @@
                 width: 60%;
                 font-size: 90%;
             }
-            #spacing2 {
+            #spacing {
                 margin: 0 0 0 0;
                 height: 4vh;
                 width: 100%;
             }
         </style>
-    </section>
-
-    <!-- Connection Scan Algorithm: What?, Why?, Show Linked Connections visualisation, influence of updates on CSA. -->
-    <section class="slide">
-        <h2>Connection Scan Algorithm</h2>
-        <div id="map"></div>
-        <style>
-            #map {
-                width: 100%;
-                height: 70%;
-            }
-        </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-        <script src="https://linkedconnections.org/js/jquery.min.js"></script>
-        <script src="https://linkedconnections.org/js/leaflet.js"></script>
-        <script src="https://linkedconnections.org/js/lc-client.js"></script>
-        <script src="https://linkedconnections.org/js/main.js"></script>
     </section>
 
     <section class="slide">
@@ -331,6 +358,8 @@
             <li class="next">We already implemented the CSA in the QRail library, which will be extended later with live Open Data.</li>
         </ol>
     </section>
+
+    
 
     <!-- The end: questions -->
     <section class="slide" id="end">
