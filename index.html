@@ -19,7 +19,7 @@
 
     <section class="slide" id="start">
         <div id="flex-title">
-            <h2>Publishing live Open Data</h2>
+            <h2>Publishing<br> real time Open Data</h2>
             <p>By <a href="https://dylanvanassche.be">Dylan Van Assche</a></p>
             <figure>
                 <img class="cover" id="background" src="images/cover.jpg" alt="Broken fence">
@@ -36,6 +36,7 @@
             #background {
                 filter: blur(8px);
             }
+
             #flex-title {
                 height: 80%;
                 display: flex;
@@ -144,7 +145,7 @@
         <ol>
             <li>How can we keep a cache for route planners up to date in a cost-efficient way for both Open
 Data publishers and consumers?</li>
-            <li>How can we consume real time Open Data updates in route planner algorithms in an efficient
+            <li class="next">How can we consume real time Open Data updates in route planner algorithms in an efficient
 way?</li>
         </ol>
     </section>
@@ -171,17 +172,17 @@ way?</li>
     <section class="slide" id="goals">
         <h2>Goals</h2>
         <div class="wrapper1">
-            <div class="wrapper2 next">
+            <div class="wrapper2">
                 <div>Informing commuters<br> in real time</div>
-                <div><img src="images/informing-real-time.jpg" alt="cost" /></div>
+                <div><img src="images/informing-real-time.jpg" alt="Informing real time" /></div>
             </div>
             <div class="wrapper2 next">
                 <div>Alternatives based<br> on real time data</div>
-                <div><img src="images/alternatives.jpg" alt="cost" /></div>
+                <div><img src="images/alternatives.jpg" alt="Alternatives" /></div>
             </div>
             <div class="wrapper2 next">
                 <div>Cost-efficient for publishers and consumers</div>
-                <div><img src="images/cost.jpg" alt="cost" /></div>
+                <div><img src="images/cost.jpg" alt="Cost" /></div>
             </div>
         </div>
         <style>
@@ -237,9 +238,9 @@ way?</li>
     <section class="slide" id="implementation">
         <h2>Implementation</h2>
         <figure>
-            <img class="cover" src="images/state-of-the-art.jpg" alt="State of the art">
+            <img class="cover" src="images/implementation.jpg" alt="Implementation">
             <figcaption class="copyright right white">
-                <a href="https://www.pexels.com/photo/light-trails-on-highway-at-night-315938/">© Pixabay</a>
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
             </figcaption>
         </figure>
         <style>
@@ -252,7 +253,7 @@ way?</li>
 
     <!-- Why do we choose for JSON as data format and HTTP as the transport protocol for Open Data? -->
     <section class="slide">
-        <h2>Transporting real time data</h2>
+        <h2>Real time Open Data</h2>
         <div class="next">
             <div class="columns two">
                 <div class="box" id="box4">
@@ -350,18 +351,75 @@ way?</li>
         </style>
     </section>
 
-    <section class="slide">
+    <!-- Real time resource -->
+    <section class="slide" id="goals">
+        <h2>Adding a real time resource to Linked Connections</h2>
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div><b>LC Server</b><br>Publishing of the<br>real time data</div>
+                <div><img src="images/server.png" alt="Server" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div><b>QRail library</b><br>Consuming of the<br>real time data</div>
+                <div><img src="images/client.jpeg" alt="Client" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div><b>CSA &amp; Liveboard</b><br>Efficiently rerouting<br>and recalculation</div>
+                <div><img src="images/speed.jpg" alt="Efficiency" /></div>
+            </div>
+        </div>
+        <style>
+            .wrapper1 {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                text-align: center;
+            }
+            .wrapper2 {
+                display: grid;
+                grid-template-rows: 50% 50%;
+            }
+            #panel {
+                display: grid;
+                grid-template-colums: 200px 200px 200px;
+            }
+            .wrapper2 div img{
+                width: 80%;
+                height: 15vh;
+            }
+            #panel div p {
+                text-align: center
+            }
+        </style>
+    </section>
+
+
+
+    <!-- Part 4: Results -->
+    <section class="slide" id="results">
+        <h2>Results</h2>
+        <figure>
+            <img class="cover" src="images/results.jpg" alt="Results">
+            <figcaption class="copyright right white">
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
+            </figcaption>
+        </figure>
+    </section>
+
+
+
+    <!-- Part 5: Conclusion -->
+    <section class="slide" id="conclusion">
         <h2>Conclusion</h2>
         <ol>
-            <li>Public transport data should be published in a more efficient way.</li>
-            <li class="next">Linked Connections and the CSA could be the solution for Open Data in the public transport sector.</li>
-            <li class="next">We already implemented the CSA in the QRail library, which will be extended later with live Open Data.</li>
+            <li>This</li>
+            <li class="next">That</li>
+            <li class="next">Something else</li>
         </ol>
     </section>
 
     
 
-    <!-- The end: questions -->
+    <!-- The end: Questions -->
     <section class="slide" id="end">
         <div id="flex-center">
             <h2>Don't miss your connection,<br> use Linked Connections!</h2>
