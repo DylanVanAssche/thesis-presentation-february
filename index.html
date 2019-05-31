@@ -360,7 +360,7 @@ way?</li>
                 <div><img src="images/server.png" alt="Server" /></div>
             </div>
             <div class="wrapper2 next">
-                <div><b>QRail library</b><br>Consuming of the<br>real time data</div>
+                <div><b>QRail &amp; LCRail</b><br>Consuming of the<br>real time data</div>
                 <div><img src="images/client.jpeg" alt="Client" /></div>
             </div>
             <div class="wrapper2 next">
@@ -378,31 +378,101 @@ way?</li>
                 display: grid;
                 grid-template-rows: 50% 50%;
             }
-            #panel {
-                display: grid;
-                grid-template-colums: 200px 200px 200px;
-            }
             .wrapper2 div img{
                 width: 80%;
                 height: 15vh;
-            }
-            #panel div p {
-                text-align: center
             }
         </style>
     </section>
 
 
 
-    <!-- Part 4: Results -->
-    <section class="slide" id="results">
-        <h2>Results</h2>
+    <!-- Part 4: Benchmarks and results -->
+    <section class="slide" id="benchmarks">
+        <h2>Benchmarks</h2>
         <figure>
-            <img class="cover" src="images/results.jpg" alt="Results">
+            <img class="cover" src="images/benchmarks.jpg" alt="Benchmarks">
             <figcaption class="copyright right white">
-                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
             </figcaption>
         </figure>
+        <style>
+            #benchmarks h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="environment">
+        <h2>Test environments</h2>
+        <ol>
+            <li><b>Pushing vs polling experiment</b>: Digital Ocean server &amp; Virtual Wall clients</li>
+            <li><b>Processing of updates experiment</b>: Digital Ocean server &amp; Sailfish OS clients</li>
+        </ol>
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div><img src="images/digital-ocean.png" alt="Digital Ocean logo" /></div>
+            </div>
+            <div class="wrapper2">
+                <div><img src="images/virtual-wall.jpg" alt="Virtual Wall I" /></div>
+            </div>
+            <div class="wrapper2">
+                <div><img src="images/sailfish-os.png" alt="Sailfish OS logo" /></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="slide" id="experiment-1">
+        <h2>Experiment 1</h2>
+        <h3>Pushing vs polling experiment</h3>
+        <figure>
+            <img class="cover" src="images/benchmarks.jpg" alt="Benchmarks" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiment-1 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-1">
+        <h2>Results: HTTP polling</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>CPU spikes: 35&nbsp;% when polling</li>
+                    <li class="next">RAM usage stays the same</li>
+                    <li class="next">Mean CPU usage: 8,9&nbsp;%</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/polling-30s.png" alt="HTTP polling server usage" \>
+            </div>
+        </div>
+        <style>
+            #results-1 img {
+                width: 100%;
+            }
+            .wrapper3 {
+                display: grid;
+                grid-template-columns: 35% 65%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-2">
+        <h2>Results: SSE pushing</h2>
+        <img src="images/pushing-30s.png" alt="SSE pushing server usage" \>
+        <style>
+            #results-2 img {
+                height: 35vh;
+            }
+        </style>
     </section>
 
 
