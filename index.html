@@ -411,10 +411,11 @@ way?</li>
 
     <section class="slide" id="environment">
         <h2>Test environments</h2>
-        <ol>
+        <ul>
             <li><b>Pushing vs polling experiment</b>: Digital Ocean server &amp; Virtual Wall clients.</li>
             <li><b>Processing of updates experiment</b>: Digital Ocean server &amp; Sailfish OS clients.</li>
-        </ol>
+            <li><b>Conditions</b>: Each experiment ran for 30 minutes with a clean cache.</li>
+        </ul>
         <div class="wrapper1">
             <div class="wrapper2">
                 <div><img src="images/digital-ocean.png" alt="Digital Ocean logo" /></div>
@@ -466,7 +467,7 @@ way?</li>
             }
             .wrapper3 {
                 display: grid;
-                grid-template-columns: 40% 60%;
+                grid-template-columns: 35% 65%;
             }
         </style>
     </section>
@@ -528,7 +529,7 @@ way?</li>
             <div>
                 <ul>
                     <li>Hardware plays an important role.</li>
-                    <li>Snapshot with CSA uses less CPU resources.</li>
+                    <li class="next">Snapshot with CSA uses less CPU resources.</li>
                     <li class="next">Transport protocol doesn't matter.</li>
                 </ul>
                 <div class="next goal-box">
@@ -684,15 +685,15 @@ way?</li>
             <div>
                 <ul>
                     <li>Hardware plays an important role.</li>
-                    <li>Snapshot with CSA uses less CPU resources.</li>
+                    <li class="next">RT resource uses 2x less CPU resources.</li>
                     <li class="next">Transport protocol doesn't matter.</li>
                 </ul>
                 <div class="next goal-box">
-                    <p>Efficiently rerouting</p>
+                    <p>Efficiently recalculating</p>
                 </div>
             </div>
             <div>
-                <img src="images/cpu_planner.png" alt="CSA CPU usage" \>
+                <img src="images/cpu_liveboard.png" alt="Liveboard CPU usage" \>
             </div>
         </div>
         <style>
@@ -717,7 +718,7 @@ way?</li>
                 </ul>
             </div>
             <div>
-                <img src="images/ram_planner.png" alt="CSA RAM usage" \>
+                <img src="images/ram_liveboard.png" alt="Liveboard RAM usage" \>
             </div>
         </div>
         <style>
@@ -746,7 +747,7 @@ way?</li>
                 </ul>
             </div>
             <div>
-                <img src="images/network_received_approaches_planner.png" alt="Bandwidth usage received of the CSA planner" \>
+                <img src="images/network_received_approaches_liveboard.png" alt="Bandwidth usage received of the liveboard algorithm" \>
             </div>
         </div>
         <style>
@@ -774,7 +775,7 @@ way?</li>
                 </div>
             </div>
             <div>
-                <img src="images/network_sent_approaches_planner.png" alt="Bandwidth usage sent of the CSA planner" \>
+                <img src="images/network_sent_approaches_liveboard.png" alt="Bandwidth usage sent of the liveboard algorithm" \>
             </div>
         </div>
         <style>
@@ -795,7 +796,7 @@ way?</li>
             <div>
                 <ul>
                     <li>Hardware plays an important role.</li>
-                    <li class="next">Rerouting with snapshots is 2x-3x faster.</li>
+                    <li class="next">Recalculation is 10x faster.</li>
                     <li class="next">Transport protocol doesn't matter.</li>
                 </ul>
                 <div class="next goal-box">
@@ -803,7 +804,7 @@ way?</li>
                 </div>
             </div>
             <div>
-                <img src="images/refresh_planner.png" alt="Refresh time of the CSA planner" \>
+                <img src="images/refresh_liveboard.png" alt="Refresh time of the liveboard algorithm" \>
             </div>
         </div>
         <style>
@@ -817,6 +818,9 @@ way?</li>
             }
         </style>
     </section>
+
+
+
     <!-- Part 5: Conclusion -->
     <section class="slide" id="conclusion-1">
         <h2>Conclusion</h2>
