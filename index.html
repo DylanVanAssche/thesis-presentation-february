@@ -387,17 +387,23 @@ way?</li>
 
 
 
-    <!-- Part 4: Benchmarks and results -->
-    <section class="slide" id="benchmarks">
-        <h2>Benchmarks</h2>
+    <!-- Part 4: Experiments and results -->
+    <section class="slide" id="experiments">
+        <h2>Experiments</h2>
+        <h3>
+            <ol>
+                <li>Pushing vs polling</li>
+                <li>Processing of updates</li>
+            </ol>
+        </h3>
         <figure>
-            <img class="cover" src="images/benchmarks.jpg" alt="Benchmarks">
+            <img class="cover" src="images/experiments.jpg" alt="Experiments">
             <figcaption class="copyright right white">
                 <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
             </figcaption>
         </figure>
         <style>
-            #benchmarks h2 {
+            #experiments h2 {
                 color: white;
             }
         </style>
@@ -406,8 +412,8 @@ way?</li>
     <section class="slide" id="environment">
         <h2>Test environments</h2>
         <ol>
-            <li><b>Pushing vs polling experiment</b>: Digital Ocean server &amp; Virtual Wall clients</li>
-            <li><b>Processing of updates experiment</b>: Digital Ocean server &amp; Sailfish OS clients</li>
+            <li><b>Pushing vs polling experiment</b>: Digital Ocean server &amp; Virtual Wall clients.</li>
+            <li><b>Processing of updates experiment</b>: Digital Ocean server &amp; Sailfish OS clients.</li>
         </ol>
         <div class="wrapper1">
             <div class="wrapper2">
@@ -426,9 +432,9 @@ way?</li>
 
     <section class="slide" id="experiment-1">
         <h2>Experiment 1</h2>
-        <h3>Pushing vs polling experiment</h3>
+        <h3>Pushing vs polling</h3>
         <figure>
-            <img class="cover" src="images/benchmarks.jpg" alt="Benchmarks" \>
+            <img class="cover" src="images/experiments.jpg" alt="Benchmarks" \>
             <figcaption class="copyright right white">
                 <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
             </figcaption>
@@ -441,7 +447,7 @@ way?</li>
     </section>
 
     <section class="slide" id="results-1">
-        <h2>Results: HTTP polling</h2>
+        <h2>HTTP polling</h2>
         <div class="wrapper3">
             <div>
                 <ul>
@@ -460,25 +466,373 @@ way?</li>
             }
             .wrapper3 {
                 display: grid;
-                grid-template-columns: 35% 65%;
+                grid-template-columns: 40% 60%;
             }
         </style>
     </section>
 
     <section class="slide" id="results-2">
-        <h2>Results: SSE pushing</h2>
-        <img src="images/pushing-30s.png" alt="SSE pushing server usage" \>
+        <h2>SSE pushing</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>CPU spikes: 15&nbsp;% when pushing</li>
+                    <li class="next">RAM usage stays the same</li>
+                    <li class="next">Mean CPU usage: 2,3&nbsp;%</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>4x less<br>mean CPU usage</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/pushing-30s.png" alt="SSE pushing server usage" \>
+            </div>
+        </div>
         <style>
+            .goal-box {
+                border: 2px solid black;
+                text-align: center;
+            }
             #results-2 img {
-                height: 35vh;
+                width: 100%;
+            }
+            #results-2 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
             }
         </style>
     </section>
 
 
 
+    <section class="slide" id="experiment-2">
+        <h2>Experiment 2</h2>
+        <h3>Processing of updates: CSA</h3>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiment-2 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-3">
+        <h2>CSA: CPU usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li>Snapshot with CSA uses less CPU resources.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Efficiently rerouting</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/cpu_planner.png" alt="CSA CPU usage" \>
+            </div>
+        </div>
+        <style>
+            #results-3 img {
+                width: 100%;
+            }
+            #results-3 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-4">
+        <h2>CSA: RAM usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul class="next">
+                    <li>Each implementation uses almost the same amount of RAM.</li>
+                    <li><b>Remark</b>: Xperia X has 3x more RAM than the Jolla&nbsp;1.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/ram_planner.png" alt="CSA RAM usage" \>
+            </div>
+        </div>
+        <style>
+            .goal-box {
+                border: 2px solid black;
+                text-align: center;
+            }
+            #results-4 img {
+                width: 100%;
+            }
+            #results-4 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-5">
+        <h2>CSA: Bandwidth usage (received)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Page cache</b>: RT resource doesn't need page validation.</li>
+                    <li class="next"><b>No events</b>: RT&nbsp;SSE saves more bandwidth than RT&nbsp;polling when idle.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/network_received_approaches_planner.png" alt="Bandwidth usage received of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-5 img {
+                width: 100%;
+            }
+            #results-5 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-6">
+        <h2>CSA: Bandwidth usage (sent)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>RT&nbsp;resource</b>: 1 request for each update.</li>
+                    <li class="next"><b>Original</b>: Validates each page during an update.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>RT resource<br>saves bandwidth</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/network_sent_approaches_planner.png" alt="Bandwidth usage sent of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-6 img {
+                width: 100%;
+            }
+            #results-6 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-7">
+        <h2>CSA: User informed time</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li class="next">Rerouting with snapshots is 2x-3x faster.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Faster informed</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/refresh_planner.png" alt="Refresh time of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-7 img {
+                width: 100%;
+            }
+            #results-7 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="experiment-2">
+        <h2>Experiment 2</h2>
+        <h3>Processing of updates: Liveboard</h3>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiment-2 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-3">
+        <h2>Liveboard: CPU usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li>Snapshot with CSA uses less CPU resources.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Efficiently rerouting</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/cpu_planner.png" alt="CSA CPU usage" \>
+            </div>
+        </div>
+        <style>
+            #results-3 img {
+                width: 100%;
+            }
+            #results-3 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-4">
+        <h2>Liveboard: RAM usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul class="next">
+                    <li>Each implementation uses almost the same amount of RAM.</li>
+                    <li><b>Remark</b>: Xperia X has 3x more RAM than the Jolla&nbsp;1.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/ram_planner.png" alt="CSA RAM usage" \>
+            </div>
+        </div>
+        <style>
+            .goal-box {
+                border: 2px solid black;
+                text-align: center;
+            }
+            #results-4 img {
+                width: 100%;
+            }
+            #results-4 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-5">
+        <h2>Liveboard: Bandwidth usage (received)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Page cache</b>: RT resource doesn't need page validation.</li>
+                    <li class="next"><b>No events</b>: RT&nbsp;SSE saves more bandwidth than RT&nbsp;polling when idle.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/network_received_approaches_planner.png" alt="Bandwidth usage received of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-5 img {
+                width: 100%;
+            }
+            #results-5 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-6">
+        <h2>Liveboard: Bandwidth usage (sent)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>RT&nbsp;resource</b>: 1 request for each update.</li>
+                    <li class="next"><b>Original</b>: Validates each page during an update.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>RT resource<br>saves bandwidth</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/network_sent_approaches_planner.png" alt="Bandwidth usage sent of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-6 img {
+                width: 100%;
+            }
+            #results-6 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-7">
+        <h2>Liveboard: User informed time</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li class="next">Rerouting with snapshots is 2x-3x faster.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Faster informed</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/refresh_planner.png" alt="Refresh time of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-7 img {
+                width: 100%;
+            }
+            #results-7 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
     <!-- Part 5: Conclusion -->
-    <section class="slide" id="conclusion">
+    <section class="slide" id="conclusion-1">
+        <h2>Conclusion</h2>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #conclusion-1 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+    <section class="slide" id="conclusion-2">
         <h2>Conclusion</h2>
         <ol>
             <li>This</li>
