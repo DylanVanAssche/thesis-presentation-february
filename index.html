@@ -230,6 +230,78 @@ way?</li>
         </style>
     </section>
 
+    <section class="slide" id="architecture">
+        <h2>Architecture</h2>
+        <div class="wrapper4">
+            <div>
+                <div class="wrapper5 next">
+                    <div>
+                        Self-written LC library &amp; client.
+                    </div>
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="10%" y1="60%" x2="85%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <br> <!-- Ugly spacing fix -->
+                        Local processing of journeys and liveboards. 
+                    </div>
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="10%" y1="50%" x2="85%" y2="30%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="images/architecture.png" alt="Architecture" \>
+            </div>
+
+            <div>
+                <div class="wrapper6 next">
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="85%" y1="60%" x2="10%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        Converts GTFS(-RT) to LC (<code>gtfsrt2lc</code>).
+                    </div>
+
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="85%" y1="50%" x2="10%" y2="30%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <br> <!-- Ugly spacing fix -->
+                        Publishes LC fragments to clients. 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .wrapper4 {
+                display: grid;
+                grid-template-columns: 27.5% 45% 27.5%;
+                text-align: center;
+            }
+            .wrapper5 {
+                display: grid;
+                grid-template-columns: 80% 20%;
+            }
+            .wrapper6 {
+                display: grid;
+                grid-template-columns: 20% 80%;
+            }
+            #architecture img {
+                width: 100%;
+            }
+        </style>
+    </section>
 
     <!-- Why do we choose for JSON as data format and HTTP as the transport protocol for Open Data? -->
     <section class="slide">
@@ -363,10 +435,6 @@ way?</li>
                 height: 15vh;
             }
         </style>
-    </section>
-
-    <section class="slide" id="architecture">
-        <h2>Architecture</h2>
     </section>
 
     <section class="slide" id="implementation-2">
