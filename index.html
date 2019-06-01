@@ -421,11 +421,6 @@ way?</li>
             </div>
         </div>
         <style>
-            .wrapper1 {
-                display: grid;
-                grid-template-columns: 33% 33% 33%;
-                text-align: center;
-            }
             .wrapper2 {
                 display: grid;
                 grid-template-rows: 50% 50%;
@@ -463,7 +458,7 @@ way?</li>
                 <ul>
                     <li>GTFS-RT defines their<br>data differently from LC.</li>
                     <li class="next">Only changed delays<br>are supplied.</li>
-                    <li class="next">Rewrote the algorithm<br>and added cancellation support.</li>
+                    <li class="next">Rewrote the algorithm<br>and added cancellations support.</li>
                 </ul>
             </div>
             <div>
@@ -479,6 +474,63 @@ way?</li>
 
     <section class="slide" id="events-manager">
         <h2>Events Manager</h2>
+        <div class="wrapper7">
+            <div class="goal-box box-center">
+                <code>gtfsrt2lc</code>
+            </div>
+
+            <div>
+                <svg class="svg-arrow">
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#cc0000" />
+                        </marker>
+                    </defs>
+                    <line x1="10%" y1="50%" x2="60%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
+                </svg>
+            </div>
+
+            <div class="goal-box box-center">
+                Events Manager
+            </div>
+
+            <div>
+                <svg class="svg-arrow">
+                    <line x1="10%" y1="50%" x2="60%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
+                </svg>
+            </div>
+
+            <div class="goal-box box-center">
+                RT resource
+            </div>
+
+            <div>
+                Creates a LC real time feed.
+            </div>
+
+            <div></div>
+
+            <div>
+                Only publishes new events.
+            </div>
+
+            <div></div>
+
+            <div>
+                Clients query the RT resource.
+            </div>
+        </div>
+        <style>
+            .wrapper7 {
+                display: grid;
+                grid-template-columns: 23.3% 15% 23.3% 15% 23.3%;
+            }
+            .box-center {
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+            }
+        </style> 
     </section>
 
     <section class="slide" id="implementation-3">
