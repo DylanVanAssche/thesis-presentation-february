@@ -715,42 +715,56 @@ Reroute using CSA (same as planning).</code></pre>
 
     <section class="slide" id="demo-1">
         <h2>Demo: CSA updates</h2>
-        <div class="wrapper3">
+        <div class="wrapper11">
             <div>
                 <ul>
-                    <li>1</li>
-                    <li class="next">2</li>
-                    <li class="next">3</li>
+                    <li><b>Initial routing</b>: Caching all pages in the page cache.</li>
+                    <li class="next"><b>Update 15h43</b>: + 4 minutes delay.</li>
+                    <li class="next"><b>Update 14h13</b>: + 1 minute delay.</li>
                 </ul>
             </div>
             <div>
-                <img src="images/polling-30s.png" alt="Demo: CSA" \>
+                <iframe id="demo-csa" sandbox="allow-same-origin allow-scripts" src="https://open.tube/videos/embed/0a02986a-167c-4c19-9e97-d9f4f9f2c179" frameborder="0" allowfullscreen muted></iframe>
             </div>
         </div>
         <style>
             #demo-1 img {
                 width: 100%;
             }
+            #demo-csa {
+                transform: rotate(90deg);
+                height: 26vh;
+                width: 20vw;
+            }
+            .wrapper11 {
+                display: grid;
+                grid-template-columns: 50% 45%;
+                gap: 5%;
+            }
         </style>
     </section>
 
     <section class="slide" id="demo-2">
         <h2>Demo: Liveboard updates</h2>
-        <div class="wrapper3">
+        <div class="wrapper11">
             <div>
                 <ul>
-                    <li>1</li>
-                    <li class="next">2</li>
-                    <li class="next">3</li>
+                    <li><b>Initial calculation</b>: All pages are fetched and cached in the page<br>cache.</li>
+                    <li class="next"><b>Update 14h33</b>: + 5 minutes delay.</li>
                 </ul>
             </div>
             <div>
-                <img src="images/polling-30s.png" alt="Demo: Liveboard" \>
+                <iframe id="demo-liveboard" sandbox="allow-same-origin allow-scripts" src="https://open.tube/videos/embed/66126b6a-dfd4-435b-9308-47c3e0d548a8" frameborder="0" allowfullscreen muted></iframe>
             </div>
         </div>
         <style>
             #demo-2 img {
                 width: 100%;
+            }
+            #demo-liveboard {
+                transform: rotate(90deg);
+                height: 26vh;
+                width: 20vw;
             }
         </style>
     </section>
