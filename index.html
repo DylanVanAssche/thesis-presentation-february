@@ -597,7 +597,7 @@ way?</li>
                 </ul>
             </div>
             <div>
-                <img src="images/polling-30s.png" alt="CSA high level" \>
+                <img src="images/csa.png" alt="CSA high level" \>
             </div>
         </div>
         <style>
@@ -609,20 +609,28 @@ way?</li>
 
     <section class="slide" id="csa-qrail">
         <h2>CSA in QRail</h2>
-        <div class="wrapper3">
-            <div>
-                <ul>
-                    <li><b>Combined approach</b>: Filters unreachable connections with CSA EA. Routing is done with CSA profile.</li>
-                    <li class="next"><b>Rollback</b>: Only reroute the changed connections.</li>
-                </ul>
+        <div class="wrapper8">
+            <div class="goal-box">
+                <h3>Combined approach</h3> Filters unreachable connections with CSA&nbsp;EA. Routing is done with CSA&nbsp;profile.
             </div>
-            <div>
-                <img src="images/polling-30s.png" alt="CSA in QRail" \>
+    
+            <div class="goal-box next">
+                <h3>Snapshots</h3> Creates snapshots<br>of the CSA data structures during routing.
+            </div>
+
+            <div class="goal-box next">
+                <h3>Rolling back</h3> Only reroute the changed connections by rolling back to the right snapshot.
             </div>
         </div>
         <style>
             #csa-qrail img {
                 width: 100%;
+            }
+            .wrapper8 {
+                display: grid;
+                grid-template-columns: 33% 26.5% 33%;
+                gap: 2.5%;
+                text-align: center;
             }
         </style>
     </section>
