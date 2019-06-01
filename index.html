@@ -373,6 +373,9 @@ way?</li>
             #implementation-2 h2 {
                 color: white;
             }
+            #implementation-2 h3 {
+                color: white;
+            }
         </style>
     </section>
 
@@ -394,7 +397,10 @@ way?</li>
             </figcaption>
         </figure>
         <style>
-            #implementation-3 h2, h3 {
+            #implementation-3 h2 {
+                color: white;
+            }
+            #implementation-3 h3 {
                 color: white;
             }
         </style>
@@ -419,6 +425,50 @@ way?</li>
     <section class="slide" id="liveboard-updates">
         <h2>Liveboard updates</h2>
     </section>
+
+    <section class="slide" id="demo-1">
+        <h2>Demo: CSA updates</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>CPU spikes: 35&nbsp;% when polling</li>
+                    <li class="next">RAM usage stays the same</li>
+                    <li class="next">Mean CPU usage: 8,9&nbsp;%</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/polling-30s.png" alt="HTTP polling server usage" \>
+            </div>
+        </div>
+        <style>
+            #demo-1 img {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo-2">
+        <h2>Demo: Liveboard updates</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>CPU spikes: 35&nbsp;% when polling</li>
+                    <li class="next">RAM usage stays the same</li>
+                    <li class="next">Mean CPU usage: 8,9&nbsp;%</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/polling-30s.png" alt="HTTP polling server usage" \>
+            </div>
+        </div>
+        <style>
+            #demo-2 img {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+
 
     <!-- Part 4: Experiments and results -->
     <section class="slide" id="experiments">
@@ -877,11 +927,6 @@ way?</li>
             <li class="next"><b>Real time resource</b>: Less bandwidth and processing power is needed.</li>
             <li class="next"><b>Updates only</b>: Only process the changes to the data. Validation is not needed anymore.</li>
         </ol>
-        <style>
-            #conclusion-2 h3 {
-                color: black;
-            }
-        </style>
     </section>
 
     <section class="slide" id="conclusion-3">
@@ -891,11 +936,6 @@ way?</li>
             <li class="next"><b>Updates only</b>: Processing only the changes to the data, improves the CPU and bandwidth usage.</li>
             <li class="next"><b>Faster computation</b>: The user is informed faster about changes to<br>his or her trip.</li>
         </ol>
-        <style>
-            #conclusion-3 h3 {
-                color: black;
-            }
-        </style>
     </section>
     </section>
 
