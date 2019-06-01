@@ -166,13 +166,14 @@ way?</li>
         <h2>Google has been doing this for years</h2>
         <div class="columns two">
             <img id="concurrent" src="images/concurrent.jpg" alt="Google Maps can already do the same?">
-            <h3 class="next" id="goal">How can we publish Linked Connections in a more efficient way?</h3>
+            <h3 class="next" id="goal-1">How can we publish Linked Connections in a more efficient way?</h3>
         </div>
         <style>
             #concurrent {
                 width: 100%;
             }
-            #goal {
+            #goal-1 {
+                color: black;
                 width: 100%;
             }
         </style>
@@ -188,13 +189,14 @@ way?</li>
             <figcaption>opendatahandbook.org</figcaption>
         </figure>
         <div class="next" id="goal-box">
-	    <h3 id="goal">Reducing maintenance and publication costs</h3>
+	    <h3 id="goal-2">Reducing maintenance and publication costs</h3>
         </div>
         <style>
             #goal-box {
                 border: 2px solid black;
             }
-            #goal {
+            #goal-2 {
+                color: black;
                 text-align: center;
                 font-size: 150%;
             }
@@ -204,7 +206,7 @@ way?</li>
 
 
     <!-- Part 3: Implementation -->
-    <section class="slide" id="implementation">
+    <section class="slide" id="implementation-1">
         <h2>Implementation</h2>
         <figure>
             <img class="cover" src="images/implementation.jpg" alt="Implementation">
@@ -213,7 +215,7 @@ way?</li>
             </figcaption>
         </figure>
         <style>
-            #implementation h2 {
+            #implementation-1 h2 {
                 color: white;
             }
         </style>
@@ -354,7 +356,69 @@ way?</li>
         </style>
     </section>
 
+    <section class="slide" id="architecture">
+        <h2>Architecture</h2>
+    </section>
 
+    <section class="slide" id="implementation-2">
+        <h2>Linked Connections Server</h2>
+        <h3>Server-side</h3>
+        <figure>
+            <img class="cover" src="images/implementation.jpg" alt="Implementation">
+            <figcaption class="copyright right white">
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
+            </figcaption>
+        </figure>
+        <style>
+            #implementation-2 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="gtfsrt2lc">
+        <h2>The <code>gtfsrt2lc</code> library</h2>
+    </section>
+
+    <section class="slide" id="events-manager">
+        <h2>Events Manager</h2>
+    </section>
+
+    <section class="slide" id="implementation-3">
+        <h2>QRail &amp; LCRail</h2>
+        <h3>Client-side</h3>
+        <figure>
+            <img class="cover" src="images/implementation.jpg" alt="Implementation">
+            <figcaption class="copyright right white">
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
+            </figcaption>
+        </figure>
+        <style>
+            #implementation-3 h2, h3 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="updates-processing">
+        <h2>Processing of updates</h2>
+    </section>
+
+    <section class="slide" id="csa">
+        <h2>High level overview of the CSA</h2>
+    </section>
+
+    <section class="slide" id="csa-updates">
+        <h2>CSA updates</h2>
+    </section>
+
+    <section class="slide" id="csa">
+        <h2>High level overview of the Liveboard algorithm</h2>
+    </section>
+
+    <section class="slide" id="liveboard-updates">
+        <h2>Liveboard updates</h2>
+    </section>
 
     <!-- Part 4: Experiments and results -->
     <section class="slide" id="experiments">
@@ -813,6 +877,11 @@ way?</li>
             <li class="next"><b>Real time resource</b>: Less bandwidth and processing power is needed.</li>
             <li class="next"><b>Updates only</b>: Only process the changes to the data. Validation is not needed anymore.</li>
         </ol>
+        <style>
+            #conclusion-2 h3 {
+                color: black;
+            }
+        </style>
     </section>
 
     <section class="slide" id="conclusion-3">
@@ -822,6 +891,12 @@ way?</li>
             <li class="next"><b>Updates only</b>: Processing only the changes to the data, improves the CPU and bandwidth usage.</li>
             <li class="next"><b>Faster computation</b>: The user is informed faster about changes to<br>his or her trip.</li>
         </ol>
+        <style>
+            #conclusion-3 h3 {
+                color: black;
+            }
+        </style>
+    </section>
     </section>
 
     <section class="slide" id="conclusion-4">
