@@ -476,54 +476,63 @@ way?</li>
         <h2>Events Manager</h2>
         <div class="wrapper7">
             <div class="goal-box box-center">
-                <code>gtfsrt2lc</code>
+                <b><code>gtfsrt2lc</code></b>
             </div>
 
             <div>
                 <svg class="svg-arrow">
                     <defs>
-                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
-                            <path d="M0,0 L0,6 L9,3 z" fill="#cc0000" />
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="2" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,4 L5,2 z" fill="#cc0000" />
                         </marker>
                     </defs>
-                    <line x1="10%" y1="50%" x2="60%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
+                    <line x1="10%" y1="50%" x2="65%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
                 </svg>
             </div>
 
             <div class="goal-box box-center">
-                Events Manager
+                <b>Events Manager</b>
             </div>
 
             <div>
                 <svg class="svg-arrow">
-                    <line x1="10%" y1="50%" x2="60%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
+                    <line x1="10%" y1="50%" x2="65%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
                 </svg>
             </div>
 
             <div class="goal-box box-center">
-                RT resource
+                <b>RT resource</b>
             </div>
 
             <div>
-                Creates a LC real time feed.
-            </div>
-
-            <div></div>
-
-            <div>
-                Only publishes new events.
+                <ul>
+                    <li>Creates a LC real&nbsp;time feed.</li>
+                    <li>All events from the last X minutes.</li>
+                </ul>
             </div>
 
             <div></div>
 
             <div>
-                Clients query the RT resource.
+                <ul>
+                    <li>Only publishes<br>new events.</li>
+                    <li>SOSA ontology.</li>
+                </ul>
+            </div>
+
+            <div></div>
+
+            <div>
+                <ul>
+                    <li>Clients can query the RT resource.</li>
+                    <li>HTTP polling<br>or SSE.</li>
+                </ul>
             </div>
         </div>
         <style>
             .wrapper7 {
                 display: grid;
-                grid-template-columns: 23.3% 15% 23.3% 15% 23.3%;
+                grid-template-columns: 26.67% 10% 26.67% 10% 26.67%;
             }
             .box-center {
                 display: flex;
