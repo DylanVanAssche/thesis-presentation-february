@@ -549,7 +549,7 @@ way?</li>
                 <ul>
                     <li>Update frequency limited to 30 seconds (NMBS).</li>
                     <li class="next">Events Manager transform the data into LOD.</li>
-                    <li class="next">The server only serves a static JSON file.</li>
+                    <li class="next">The server only serves a static JSON-LD file.</li>
                 </ul>
             </div>
             <div>
@@ -588,13 +588,50 @@ way?</li>
 
     <section class="slide" id="csa">
         <h2>High level overview of the CSA</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Scans each connection</b>: Finds a route from A to B.</li>
+                    <li class="next"><b>Profile variant</b>: Modular with profiles.</li>
+                    <li class="next"><b>Faster</b>: No priority queue (Dijkstra), connections sorted by departure time.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/polling-30s.png" alt="CSA high level" \>
+            </div>
+        </div>
+        <style>
+            #csa img {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="csa-qrail">
+        <h2>CSA in QRail</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Combined approach</b>: Filters unreachable connections with CSA EA. Routing is done with CSA profile.</li>
+                    <li class="next"><b>Rollback</b>: Only reroute the changed connections.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/polling-30s.png" alt="CSA in QRail" \>
+            </div>
+        </div>
+        <style>
+            #csa-qrail img {
+                width: 100%;
+            }
+        </style>
     </section>
 
     <section class="slide" id="csa-updates">
         <h2>CSA updates</h2>
     </section>
 
-    <section class="slide" id="csa">
+    <section class="slide" id="liveboard">
         <h2>High level overview of the Liveboard algorithm</h2>
     </section>
 
