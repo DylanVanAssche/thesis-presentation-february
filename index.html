@@ -472,8 +472,8 @@ way?</li>
         </style>        
     </section>
 
-    <section class="slide" id="events-manager">
-        <h2>Events Manager</h2>
+    <section class="slide" id="events-manager-task">
+        <h2>Events Manager: task</h2>
         <div class="wrapper7">
             <div class="goal-box box-center">
                 <b><code>gtfsrt2lc</code></b>
@@ -540,6 +540,27 @@ way?</li>
                 align-items: center; /* align vertical */
             }
         </style> 
+    </section>
+
+    <section class="slide" id="events-manager-flow">
+        <h2>Events Manager: general flow</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Update frequency limited to 30 seconds (NMBS).</li>
+                    <li class="next">Events Manager transform the data into LOD.</li>
+                    <li class="next">The server only serves a static JSON file.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/events-manager.png" alt="Events Manager flowchart" \>
+            </div>
+            <style>
+                #events-manager-flow img {
+                    width: 100%;
+                }
+            </style>
+        </div>
     </section>
 
     <section class="slide" id="implementation-3">
