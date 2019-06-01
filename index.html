@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Thesis Presentation February 2019</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
@@ -14,13 +13,13 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Thesis Presentation February 2019</h1>
+        <h1>Thesis Presentation June 2019</h1>
         <p>by Dylan Van Assche</p>
     </header>
 
     <section class="slide" id="start">
         <div id="flex-title">
-            <h2>Publishing live Open Data</h2>
+            <h2>Publishing<br> real time Open Data</h2>
             <p>By <a href="https://dylanvanassche.be">Dylan Van Assche</a></p>
             <figure>
                 <img class="cover" id="background" src="images/cover.jpg" alt="Broken fence">
@@ -37,6 +36,7 @@
             #background {
                 filter: blur(8px);
             }
+
             #flex-title {
                 height: 80%;
                 display: flex;
@@ -82,63 +82,268 @@
         </style>
     </section>
 
-    <!-- Part 1: Background and goals (40 %) -->
-    <!-- Ask question to the public about their public transport usage -->
 
-    <!-- Information about your public transport trip -->
+
+    <!-- Part 1: Introduction -->
+    <!-- Intro -->
     <section class="slide">
-        <h2>Information during your trip</h2>
-        <div class="columns three" id="panel">
-            <div class="next">
-                <p>Information panels</p>
-                <img src="images/information-panel-nmbs.jpg" alt="Information panel NMBS" />
-            </div>
-            <div class="next">
-                <p>Apps</p>
-                <img src="images/nmbs-app.png" alt="NMBS app" />
-            </div>
-            <div class="next">
-                <p>Employees</p>
-                <img src="images/nmbs-employee.jpg" alt="NMBS employees" />
-            </div>
-        </div>
+        <h2>Are you sure you're going to make it?</h2>
+        <figure>
+            <img class="cover" src="images/collage.png" alt="Collage" \>
+        </figure>
         <style>
-            #panel div img{
-                width: 100%;
-            }
-            #panel div p {
-                text-align: center
+            #panel img {
+                height: 37.5vh;
             }
         </style>
     </section>
 
-    <!-- How it's done today -->
+    <!-- Research questions -->
+    <section class="slide" id="research-questions">
+        <h2>Research questions</h2>
+        <ol>
+            <li>How can we keep a cache for route planners up to date in a cost-efficient way for both Open
+Data publishers and consumers?</li>
+            <li class="next">How can we consume real time Open Data updates in route planner algorithms in an efficient
+way?</li>
+        </ol>
+    </section>
+
+
+
+    <!-- Part 2: Specifications high level -->
+    <section class="slide" id="specifications">
+        <h2>Specifications</h2>
+        <figure>
+            <img class="cover" src="images/specifications.jpg" alt="Specifications">
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/person-holding-pen-point-on-blueprint-1537008">© Rawpixel.com</a>
+            </figcaption>
+        </figure>
+        <style>
+            #specifications h2 {
+                color: white;
+            }
+        </style>
+    </section>
+    
+    <!-- Goals for the user -->
+    <section class="slide" id="goals">
+        <h2>Goals</h2>
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div>Informing commuters<br>in real time.</div>
+                <div><img src="images/informing-real-time.jpg" alt="Informing real time" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div>Alternatives based<br>on real time data.</div>
+                <div><img src="images/alternatives.jpg" alt="Alternatives" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div>Cost-efficient for publishers and consumers.</div>
+                <div><img src="images/cost.jpg" alt="Cost" /></div>
+            </div>
+        </div>
+        <style>
+            .wrapper1 {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                text-align: center;
+            }
+            .wrapper2 {
+                display: grid;
+                grid-template-rows: 50% 50%;
+            }
+            .wrapper2 div img{
+                width: 80%;
+                height: 15vh;
+            }
+        </style>
+    </section>
+    
+    <!-- Why Linked Connections? Google already does this! => Research question -->
     <section class="slide">
-        <h2>Improving public transport data publishing</h2>
-        <!--<ol>
-            <li>Each agency has it's own terms and format</li>
-            <li class="next">Linked Connections wants to standardise the publication</li>
-            <li class="next">Data should be published under the terms of Open Data</li>
-        </ol>-->
-        <div class="box" id="box1">
-            <p>Each agency has it's own terms and format</p>
+        <h2>Google has been doing this for years</h2>
+        <div class="columns two">
+            <img id="concurrent" src="images/concurrent.jpg" alt="Google Maps can already do the same?">
+            <h3 class="next" id="goal-1">How can we publish Linked Connections in a more efficient way?</h3>
+        </div>
+        <style>
+            #concurrent {
+                width: 100%;
+            }
+            #goal-1 {
+                color: black;
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <!-- Explaining Open Data -->
+    <section class="slide">
+        <h2>Open Data</h2>
+        <figure>
+            <blockquote>
+                <p>Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike.</p>
+            </blockquote>
+            <figcaption>opendatahandbook.org</figcaption>
+        </figure>
+        <div class="next" id="goal-box">
+	    <h3 id="goal-2">Reducing maintenance and publication costs</h3>
+        </div>
+        <style>
+            #goal-box {
+                border: 2px solid black;
+            }
+            #goal-2 {
+                color: green;
+                text-align: center;
+                font-size: 150%;
+            }
+        </style>
+    </section>
+
+
+
+    <!-- Part 3: Implementation -->
+    <section class="slide" id="implementation-1">
+        <h2>Implementation</h2>
+        <h3>
+            <ol>
+                <li>Linked Connections Server</li>
+                <li>QRail &amp; LCRail</li>
+            </ol>
+        </h3>
+        <figure>
+            <img class="cover" src="images/implementation.jpg" alt="Implementation">
+            <figcaption class="copyright right white">
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
+            </figcaption>
+        </figure>
+        <style>
+            #implementation-1 h2 {
+                color: white;
+            }
+            #implementation-1 h3 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="architecture">
+        <h2>Architecture</h2>
+        <div class="wrapper4">
+            <div>
+                <div class="wrapper5 next">
+                    <div>
+                        Self-written LC library &amp; client.
+                    </div>
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="10%" y1="60%" x2="85%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <br> <!-- Ugly spacing fix -->
+                        Local processing of journeys and liveboards. 
+                    </div>
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="10%" y1="50%" x2="85%" y2="30%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="images/architecture.png" alt="Architecture" \>
+            </div>
+
+            <div>
+                <div class="wrapper6 next">
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="85%" y1="60%" x2="10%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        Converts GTFS(-RT) to LC (<code>gtfsrt2lc</code>).
+                    </div>
+
+                    <div>
+                        <svg class="svg-arrow">
+                            <line x1="85%" y1="50%" x2="10%" y2="30%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <br> <!-- Ugly spacing fix -->
+                        Publishes LC fragments to clients. 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .wrapper4 {
+                display: grid;
+                grid-template-columns: 27.5% 45% 27.5%;
+                text-align: center;
+            }
+            .wrapper5 {
+                display: grid;
+                grid-template-columns: 80% 20%;
+            }
+            .wrapper6 {
+                display: grid;
+                grid-template-columns: 20% 80%;
+            }
+            #architecture img {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <!-- Why do we choose for JSON as data format and HTTP as the transport protocol for Open Data? -->
+    <section class="slide">
+        <h2>Real time Open Data</h2>
+        <div class="next">
+            <div class="columns two">
+                <div class="box" id="box4">
+                    <p>JSON is one of the lightest<br>data formats on the Web.</p>
+                </div>
+                <div class="box" id="box5">
+                    <p>Readable by humans<br>and machines.</p>
+                </div>
+            </div>
+            <div class="columns two" id="spacing">
+                <svg class="svg-arrow">
+                    <line x1="50%" y1="10%" x2="80%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                </svg>
+
+                <svg class="svg-arrow">
+                    <line x1="20%" y1="90%" x2="50%" y2="10%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                </svg>
+            </div>
+        </div>
+        <div class="box" id="box6">
+            <p><b>HTTP &amp; JSON</b></p>
         </div>
         <div class="next">
             <div class="columns two" id="spacing">
                 <svg class="svg-arrow">
-                    <line x1="95%" y1="5%" x2="50%" y2="95%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                    <line x1="80%" y1="10%" x2="50%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
                 </svg>
 
                 <svg class="svg-arrow">
-                    <line x1="5%" y1="5%" x2="50%" y2="95%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
+                    <line x1="20%" y1="10%" x2="50%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
                 </svg>
             </div>
             <div class="columns two">
-                <div class="box" id="box2">
-                    <p>Linked Connections wants to standardise the publication</p>
+                <div class="box" id="box7">
+                    <p>HTTP caching is<br>used everywhere.</p>
                 </div>
-                <div class="box" id="box3">
-                    <p>Data should be published under the terms of Open Data</p>
+                <div class="box" id="box8">
+                    <p>Supported by<br>every Web client.</p>
                 </div>
             </div>
         </div>
@@ -159,124 +364,17 @@
                 margin: 0 0 0 0;
                 text-align: center;
             }
+            .svg-arrow {
+                width: 100%;
+                height: 100%;
+            }
+
             #box1 {
                 width: 60%;
             }
             #box2 #box3 {
                 width: 100%;
             }
-            #spacing {
-                height: 15vh;
-            }
-            .svg-arrow {
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-    </section>
-    <!-- Ask the public what they know about Open Data -->
-
-    <section class="slide" id="state-of-the-art">
-        <h2>State of the art</h2>
-        <figure>
-            <img class="cover" src="images/state-of-the-art.jpg" alt="State of the art">
-            <figcaption class="copyright right white">
-                <a href="https://www.pexels.com/photo/light-trails-on-highway-at-night-315938/">© Pixabay</a>
-            </figcaption>
-        </figure>
-        <style>
-            #state-of-the-art h2 {
-                color: white;
-            }
-        </style>
-    </section>
-
-    <!-- Part 2: Analysing the problem and the start of the implementation (50 %) -->
-    <!-- Explaining Open Data -->
-    <section class="slide">
-        <h2>Open Data</h2>
-        <figure>
-            <blockquote>
-                <p>Open data is data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike.</p>
-            </blockquote>
-            <figcaption>opendatahandbook.org</figcaption>
-        </figure>
-        <div class="next" id="goal-box">
-	    <h3 id="goal">Reducing maintenance and publication costs</h3>
-        </div>
-        <style>
-            #goal-box {
-                border: 2px solid black;
-            }
-            #goal {
-                text-align: center;
-                font-size: 150%;
-            }
-        </style>
-    </section>
-
-    <!-- Why Linked Connections? Google already does this! => Research question -->
-    <section class="slide">
-        <h2>Google has been doing this for years</h2>
-        <div class="columns two">
-            <img id="concurrent" src="images/concurrent.jpg" alt="Google Maps can already do the same?">
-            <h3 class="next" id="goal">How can we publish Linked Connections in a more efficient way?</h3>
-        </div>
-        <style>
-            #concurrent {
-                width: 100%;
-            }
-            #goal {
-                width: 100%;
-            }
-        </style>
-    </section>
-
-    <!-- Why do we choose for JSON as data format and HTTP as the transport protocol for Open Data? -->
-    <section class="slide">
-        <h2>Transporting real time data</h2>
-        <div class="next">
-            <div class="columns two">
-                <div class="box" id="box4">
-                    <p>JSON is one of the lightest <br> data formats on the Web</p>
-                </div>
-                <div class="box" id="box5">
-                    <p>Readable by humans <br> and machines</p>
-                </div>
-            </div>
-            <div class="columns two" id="spacing2">
-                <svg class="svg-arrow">
-                    <line x1="50%" y1="10%" x2="80%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
-                </svg>
-
-                <svg class="svg-arrow">
-                    <line x1="20%" y1="90%" x2="50%" y2="10%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
-                </svg>
-            </div>
-        </div>
-        <div class="box" id="box6">
-            <p><b>HTTP &amp; JSON</b></p>
-        </div>
-        <div class="next">
-            <div class="columns two" id="spacing2">
-                <svg class="svg-arrow">
-                    <line x1="80%" y1="10%" x2="50%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
-                </svg>
-
-                <svg class="svg-arrow">
-                    <line x1="20%" y1="10%" x2="50%" y2="90%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round"></line>
-                </svg>
-            </div>
-            <div class="columns two">
-                <div class="box" id="box7">
-                    <p>HTTP caching is <br> used everywhere</p>
-                </div>
-                <div class="box" id="box8">
-                    <p>Supported by <br> every Web client</p>
-                </div>
-            </div>
-        </div>
-        <style>
             #box4 {
                 width: 87.5%;
                 font-size: 90%;
@@ -297,7 +395,7 @@
                 width: 60%;
                 font-size: 90%;
             }
-            #spacing2 {
+            #spacing {
                 margin: 0 0 0 0;
                 height: 4vh;
                 width: 100%;
@@ -305,72 +403,872 @@
         </style>
     </section>
 
-    <!-- Connection Scan Algorithm: What?, Why?, Show Linked Connections visualisation, influence of updates on CSA. -->
-    <section class="slide">
-        <h2>Connection Scan Algorithm</h2>
-        <div id="map"></div>
+    <!-- Real time resource -->
+    <section class="slide" id="goals">
+        <h2>Adding a real time resource to Linked Connections</h2>
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div><b>LC Server</b><br>Publishing of the<br>real time data.</div>
+                <div><img src="images/server.png" alt="Server" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div><b>QRail &amp; LCRail</b><br>Consuming of the<br>real time data.</div>
+                <div><img src="images/client.jpeg" alt="Client" /></div>
+            </div>
+            <div class="wrapper2 next">
+                <div><b>CSA &amp; Liveboard</b><br>Efficiently recalculation in QRail &amp; LCRail.</div>
+                <div><img src="images/speed.jpg" alt="Efficiency" /></div>
+            </div>
+        </div>
         <style>
-            #map {
-                width: 100%;
-                height: 70%;
+            .wrapper2 {
+                display: grid;
+                grid-template-rows: 50% 50%;
+            }
+            .wrapper2 div img{
+                width: 80%;
+                height: 15vh;
             }
         </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-        <script src="https://linkedconnections.org/js/jquery.min.js"></script>
-        <script src="https://linkedconnections.org/js/leaflet.js"></script>
-        <script src="https://linkedconnections.org/js/lc-client.js"></script>
-        <script src="https://linkedconnections.org/js/main.js"></script>
     </section>
 
-    <section class="slide" id="revised-planning">
-        <h2>Revised planning</h2>
+    <section class="slide" id="implementation-2">
+        <h2>Linked Connections Server</h2>
+        <h3>Server-side</h3>
         <figure>
-            <img class="cover" src="images/planning.jpg" alt="Orange typewriter on a wooden table close-up">
+            <img class="cover" src="images/implementation.jpg" alt="Implementation">
             <figcaption class="copyright right white">
-                <a href="https://www.pexels.com/photo/orange-and-green-pen-on-graphing-notepad-131979/">© freestocks.org</a>
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
             </figcaption>
         </figure>
-    </section>
-
-    <!-- Part 3: Revised planning (10 %) -->
-    <section class="slide" id="planning">
-        <h2>Revised planning</h2>
-        <figure>
-            <div class="columns two">
-                <img src="images/gantt.png" alt="Revised planning for the second semester">
-                <ol>
-			<li>Implementing (2 months)</li>
-			<li class="next">Benchmarking (1 month)</li>
-			<li class="next">Linked Connections core (2 weeks)</li>
-			<li class="next">Writing the final text (1,5 months)</li>
-		</ol>
-            </div>
-        </figure>
         <style>
-            #planning img {
-                width: 100%;
-                height: 100%;
+            #implementation-2 h2 {
+                color: white;
             }
-            #planning figure {
-                text-align: center;
-            }
-            #planning figure div ol{
-                text-align: left;
+            #implementation-2 h3 {
+                color: white;
             }
         </style>
     </section>
 
-    <section class="slide">
+    <section class="slide" id="gtfsrt2lc">
+        <h2>The <code>gtfsrt2lc</code> library</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>GTFS-RT defines their<br>data differently from LC.</li>
+                    <li class="next">Only changed delays<br>are supplied.</li>
+                    <li class="next">Rewrote the algorithm<br>and added cancellations support.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/gtfsrt2lc.png" alt="gtfsrt2lc library" \>
+            </div>
+        </div>
+        <style>
+            #gtfsrt2lc img {
+                width: 100%;
+            }
+        </style>        
+    </section>
+
+    <section class="slide" id="events-manager-task">
+        <h2>Events Manager: task</h2>
+        <div class="wrapper7">
+            <div class="goal-box box-center">
+                <b><code>gtfsrt2lc</code></b>
+            </div>
+
+            <div>
+                <svg class="svg-arrow">
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="2" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,4 L5,2 z" fill="#cc0000" />
+                        </marker>
+                    </defs>
+                    <line x1="10%" y1="50%" x2="65%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
+                </svg>
+            </div>
+
+            <div class="goal-box box-center">
+                <b>Events Manager</b>
+            </div>
+
+            <div>
+                <svg class="svg-arrow">
+                    <line x1="10%" y1="50%" x2="65%" y2="50%" stroke= "#cc0000" stroke-width= "5" stroke-linecap="round" marker-end="url(#arrow)" />
+                </svg>
+            </div>
+
+            <div class="goal-box box-center">
+                <b>RT resource</b>
+            </div>
+
+            <div>
+                <ul>
+                    <li>Creates a LC real&nbsp;time feed.</li>
+                    <li>All events from the last X minutes.</li>
+                </ul>
+            </div>
+
+            <div></div>
+
+            <div>
+                <ul>
+                    <li>Only publishes<br>new events.</li>
+                    <li>SOSA ontology.</li>
+                </ul>
+            </div>
+
+            <div></div>
+
+            <div>
+                <ul>
+                    <li>Clients can query the RT resource.</li>
+                    <li>HTTP polling<br>or SSE.</li>
+                </ul>
+            </div>
+        </div>
+        <style>
+            .wrapper7 {
+                display: grid;
+                grid-template-columns: 26.67% 10% 26.67% 10% 26.67%;
+            }
+            .box-center {
+                display: flex;
+                justify-content: center; /* align horizontal */
+                align-items: center; /* align vertical */
+            }
+        </style> 
+    </section>
+
+    <section class="slide" id="events-manager-flow">
+        <h2>Events Manager: general flow</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Update frequency limited to 30 seconds (NMBS).</li>
+                    <li class="next">Events Manager transform the data into LOD.</li>
+                    <li class="next">The server only serves a static JSON-LD file.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/events-manager.png" alt="Events Manager flowchart" \>
+            </div>
+            <style>
+                #events-manager-flow img {
+                    width: 100%;
+                }
+            </style>
+        </div>
+    </section>
+
+    <section class="slide" id="implementation-3">
+        <h2>QRail &amp; LCRail</h2>
+        <h3>Client-side</h3>
+        <figure>
+            <img class="cover" src="images/implementation.jpg" alt="Implementation">
+            <figcaption class="copyright right white">
+                <a href="https://pixabay.com/nl/photos/technologie-toetsenbord-computing-785742/">© Pixies</a>
+            </figcaption>
+        </figure>
+        <style>
+            #implementation-3 h2 {
+                color: white;
+            }
+            #implementation-3 h3 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="updates-processing">
+        <h2>Processing of updates</h2>
+        <div class="wrapper9">
+            <div>
+                <ul>
+                    <li><b>Find page</b>: Locate the page of the updated connection.</li>
+                    <li class="next"><b>Departure delay different?</b> Move to the new page.</li>
+                    <li class="next"><b>Canceled or arrival delay different?</b> Replace connection in current page.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/update-processing-simplified.png" alt="Updates processing flowchart" \>
+            </div>
+        </div>
+        <style>
+            #updates-processing img {
+                height: 40vh;
+            }
+            .wrapper9 {
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="csa">
+        <h2>High level overview of the CSA</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Scans each connection</b>: Finds a route from A to B.</li>
+                    <li class="next"><b>Profile variant</b>: Modular with profiles.</li>
+                    <li class="next"><b>Faster</b>: No priority queue (Dijkstra), connections sorted by departure time.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/csa.png" alt="CSA high level" \>
+            </div>
+        </div>
+        <style>
+            #csa img {
+                width: 100%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="csa-snapshot">
+        <h2>CSA snapshot</h2>
+        <pre><code><b>if </b><i>first connection of journey</i><b> is affected:</b>
+    Clear data structures.
+<b>else:</b>
+    Find snapshot of the data structures.
+    Rollback to snapshot before updated connection.
+Reroute using CSA (same as planning).</code></pre>
+    </section>
+
+    <section class="slide" id="csa-qrail">
+        <h2>CSA updates in QRail</h2>
+        <div class="wrapper8">
+            <div class="goal-box">
+                <h3>Combined approach</h3> Filters unreachable connections with CSA&nbsp;EA. Routing is done with CSA&nbsp;profile.
+            </div>
+    
+            <div class="goal-box next">
+                <h3>Snapshots</h3> Creates snapshots<br>of the CSA data structures during routing.
+            </div>
+
+            <div class="goal-box next">
+                <h3>Rolling back</h3> Only reroute the changed connections by rolling back to the right snapshot.
+            </div>
+        </div>
+        <style>
+            #csa-qrail img {
+                width: 100%;
+            }
+            .wrapper8 {
+                display: grid;
+                grid-template-columns: 33% 26.5% 33%;
+                gap: 2.5%;
+                text-align: center;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="liveboard">
+        <h2>High level overview of the Liveboard algorithm</h2>
+        <div class="wrapper10">
+            <div>
+                <ul>
+                    <li><b>Scans each page</b>: In a certain time frame.</li>
+                    <li class="next"><b>URI matching</b>: Creates a list of all connections matching the stop URI.</li>
+                    <li class="next"><b>Previous &amp; next</b>: The user can get the previous and next results. The necessary pages are automatically fetched.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/liveboard.png" alt="Liveboard high level" \>
+            </div>
+        </div>
+        <style>
+            #liveboard img {
+                height: 35vh;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="liveboard-updates">
+        <h2>Liveboard updates</h2>
+        <div class="wrapper10">
+            <div>
+                <ul>
+                    <li><b>Updated connection</b>: Check if the connection is used in the liveboard.</li>
+                    <li class="next"><b>Affected</b>: Replace the connection. The UI is notified by a Qt signal.</li>
+                    <li class="next"><b>Faster</b>: Less calculations are needed in comparison to CSA.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/updating-liveboard-simplified.png" alt="Liveboard high level" \>
+            </div>
+        </div>
+        <style>
+            #liveboard-updates img {
+                height: 40vh;
+            }
+            .wrapper10 {
+                display: grid;
+                grid-template-columns: 65% 30%;
+                gap: 5%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo-1">
+        <h2>Demo: CSA updates</h2>
+        <div class="wrapper11">
+            <div>
+                <ul>
+                    <li><b>Initial routing</b>: Caching all pages in the page cache.</li>
+                    <li class="next"><b>Update 15h43</b>: + 4 minutes delay.</li>
+                    <li class="next"><b>Update 14h13</b>: + 1 minute delay.</li>
+                </ul>
+            </div>
+            <div>
+                <iframe id="demo-csa" sandbox="allow-same-origin allow-scripts" src="https://open.tube/videos/embed/0a02986a-167c-4c19-9e97-d9f4f9f2c179" frameborder="0" allowfullscreen muted></iframe>
+            </div>
+        </div>
+        <style>
+            #demo-1 img {
+                width: 100%;
+            }
+            #demo-csa {
+                transform: rotate(90deg);
+                height: 26vh;
+                width: 20vw;
+            }
+            .wrapper11 {
+                display: grid;
+                grid-template-columns: 50% 45%;
+                gap: 5%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="demo-2">
+        <h2>Demo: Liveboard updates</h2>
+        <div class="wrapper11">
+            <div>
+                <ul>
+                    <li><b>Initial calculation</b>: All pages are fetched and cached in the page<br>cache.</li>
+                    <li class="next"><b>Update 14h33</b>: + 5 minutes delay.</li>
+                </ul>
+            </div>
+            <div>
+                <iframe id="demo-liveboard" sandbox="allow-same-origin allow-scripts" src="https://open.tube/videos/embed/66126b6a-dfd4-435b-9308-47c3e0d548a8" frameborder="0" allowfullscreen muted></iframe>
+            </div>
+        </div>
+        <style>
+            #demo-2 img {
+                width: 100%;
+            }
+            #demo-liveboard {
+                transform: rotate(90deg);
+                height: 26vh;
+                width: 20vw;
+            }
+        </style>
+    </section>
+
+
+
+    <!-- Part 4: Experiments and results -->
+    <section class="slide" id="experiments">
+        <h2>Experiments</h2>
+        <h3>
+            <ol>
+                <li>Pushing vs polling</li>
+                <li>Processing of updates</li>
+            </ol>
+        </h3>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments">
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiments h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="environment">
+        <h2>Test environments</h2>
+        <ul>
+            <li><b>Pushing vs polling experiment</b>: Digital Ocean server &amp; Virtual Wall clients.</li>
+            <li class="next"><b>Processing of updates experiment</b>: Digital Ocean server &amp; Sailfish OS clients.</li>
+            <li class="next"><b>Conditions</b>: Each experiment ran for 30 minutes with a clean cache.</li>
+        </ul>
+        <div class="wrapper1">
+            <div class="wrapper2">
+                <div><img src="images/digital-ocean.png" alt="Digital Ocean logo" /></div>
+            </div>
+            <div class="wrapper2">
+                <div><img src="images/virtual-wall.jpg" alt="Virtual Wall I" /></div>
+            </div>
+            <div class="wrapper2">
+                <div><img src="images/sailfish-os.png" alt="Sailfish OS logo" /></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="slide" id="experiment-1">
+        <h2>Experiment 1</h2>
+        <h3>Pushing vs polling</h3>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiment-1 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-1">
+        <h2>HTTP polling</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>CPU spikes: 35&nbsp;% when polling.</li>
+                    <li class="next">RAM usage stays the same.</li>
+                    <li class="next">Mean CPU usage: 8,9&nbsp;%.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/polling-30s.png" alt="HTTP polling server usage" \>
+            </div>
+        </div>
+        <style>
+            #results-1 img {
+                width: 100%;
+            }
+            .wrapper3 {
+                display: grid;
+                grid-template-columns: 35% 65%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-2">
+        <h2>SSE pushing</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>CPU spikes: 15&nbsp;% when pushing.</li>
+                    <li class="next">RAM usage stays the same.</li>
+                    <li class="next">Mean CPU usage: 2,3&nbsp;%.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>4x less<br>mean CPU usage</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/pushing-30s.png" alt="SSE pushing server usage" \>
+            </div>
+        </div>
+        <style>
+            .goal-box {
+                border: 2px solid black;
+                text-align: center;
+            }
+            #results-2 img {
+                width: 100%;
+            }
+            #results-2 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+
+
+    <section class="slide" id="experiment-2">
+        <h2>Experiment 2</h2>
+        <h3>Processing of updates: CSA</h3>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiment-2 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-3">
+        <h2>CSA: CPU usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li class="next">Snapshot with CSA uses less CPU resources.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Efficiently rerouting</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/cpu_planner.png" alt="CSA CPU usage" \>
+            </div>
+        </div>
+        <style>
+            #results-3 img {
+                width: 100%;
+            }
+            #results-3 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-4">
+        <h2>CSA: RAM usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul class="next">
+                    <li>Each implementation uses almost the same amount of RAM.</li>
+                    <li><b>Remark</b>: Xperia X has 3x more RAM than the Jolla&nbsp;1.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/ram_planner.png" alt="CSA RAM usage" \>
+            </div>
+        </div>
+        <style>
+            .goal-box {
+                border: 2px solid black;
+                text-align: center;
+            }
+            #results-4 img {
+                width: 100%;
+            }
+            #results-4 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-5">
+        <h2>CSA: Bandwidth usage (received)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Page cache</b>: RT resource doesn't need page validation.</li>
+                    <li class="next"><b>No events</b>: RT&nbsp;SSE saves more bandwidth than RT&nbsp;polling when idle.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/network_received_approaches_planner.png" alt="Bandwidth usage received of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-5 img {
+                width: 100%;
+            }
+            #results-5 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-6">
+        <h2>CSA: Bandwidth usage (sent)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>RT&nbsp;resource</b>: 1 request for each update.</li>
+                    <li class="next"><b>Original</b>: Validates each page during an update.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>RT resource<br>saves bandwidth</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/network_sent_approaches_planner.png" alt="Bandwidth usage sent of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-6 img {
+                width: 100%;
+            }
+            #results-6 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-7">
+        <h2>CSA: User informed time</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li class="next">Rerouting with snapshots is 2x-3x faster.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Faster informed</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/refresh_planner.png" alt="Refresh time of the CSA planner" \>
+            </div>
+        </div>
+        <style>
+            #results-7 img {
+                width: 100%;
+            }
+            #results-7 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="experiment-2">
+        <h2>Experiment 2</h2>
+        <h3>Processing of updates: Liveboard</h3>
+        <figure>
+            <img class="cover" src="images/experiments.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/background-board-chart-data-590041/">© Pexels</a>
+            </figcaption>
+        </figure>
+        <style>
+            #experiment-2 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-3">
+        <h2>Liveboard: CPU usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li class="next">RT resource uses 2x less CPU resources.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Efficiently recalculating</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/cpu_liveboard.png" alt="Liveboard CPU usage" \>
+            </div>
+        </div>
+        <style>
+            #results-3 img {
+                width: 100%;
+            }
+            #results-3 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-4">
+        <h2>Liveboard: RAM usage</h2>
+        <div class="wrapper3">
+            <div>
+                <ul class="next">
+                    <li>Each implementation uses almost the same amount of RAM.</li>
+                    <li><b>Remark</b>: Xperia X has 3x more RAM than the Jolla&nbsp;1.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/ram_liveboard.png" alt="Liveboard RAM usage" \>
+            </div>
+        </div>
+        <style>
+            .goal-box {
+                border: 2px solid black;
+                text-align: center;
+            }
+            #results-4 img {
+                width: 100%;
+            }
+            #results-4 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-5">
+        <h2>Liveboard: Bandwidth usage (received)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>Page cache</b>: RT resource doesn't need page validation.</li>
+                    <li class="next"><b>No events</b>: RT&nbsp;SSE saves more bandwidth than RT&nbsp;polling when idle.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/network_received_approaches_liveboard.png" alt="Bandwidth usage received of the liveboard algorithm" \>
+            </div>
+        </div>
+        <style>
+            #results-5 img {
+                width: 100%;
+            }
+            #results-5 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-6">
+        <h2>Liveboard: Bandwidth usage (sent)</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li><b>RT&nbsp;resource</b>: 1 request for each update.</li>
+                    <li class="next"><b>Original</b>: Validates each page during an update.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>RT resource<br>saves bandwidth</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/network_sent_approaches_liveboard.png" alt="Bandwidth usage sent of the liveboard algorithm" \>
+            </div>
+        </div>
+        <style>
+            #results-6 img {
+                width: 100%;
+            }
+            #results-6 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="results-7">
+        <h2>Liveboard: User informed time</h2>
+        <div class="wrapper3">
+            <div>
+                <ul>
+                    <li>Hardware plays an important role.</li>
+                    <li class="next">Recalculation is 10x faster.</li>
+                    <li class="next">Transport protocol doesn't matter.</li>
+                </ul>
+                <div class="next goal-box">
+                    <p>Faster informed</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/refresh_liveboard.png" alt="Refresh time of the liveboard algorithm" \>
+            </div>
+        </div>
+        <style>
+            #results-7 img {
+                width: 100%;
+            }
+            #results-7 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+
+
+    <!-- Part 5: Conclusion -->
+    <section class="slide" id="conclusion-1">
         <h2>Conclusion</h2>
+        <figure>
+            <img class="cover" src="images/state-of-the-art.jpg" alt="Experiments" \>
+            <figcaption class="copyright right white">
+                <a href="https://www.pexels.com/photo/light-trails-on-highway-at-night-315938/">© Pixabay</a>
+            </figcaption>
+        </figure>
+        <style>
+            #conclusion-1 h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="conclusion-2">
+        <h3><i>How can we keep a cache for route planners up to date in<br>a cost-efficient way for both Open Data publishers and consumers?</i></h3>
         <ol>
-            <li>Public transport data should be published in a more efficient way.</li>
-            <li class="next">Linked Connections and the CSA could be the solution for Open Data in the public transport sector.</li>
-            <li class="next">We already implemented the CSA in the QRail library, which will be extended later with live Open Data.</li>
+            <li class="next"><b>Pushing</b>: Use a pushing approach like SSE.</li>
+            <li class="next"><b>Real time resource</b>: Less bandwidth and processing power is needed.</li>
+            <li class="next"><b>Updates only</b>: Only process the changes to the data. Validation is not needed anymore.</li>
         </ol>
     </section>
 
-    <!-- The end: questions -->
+    <section class="slide" id="conclusion-3">
+        <h3><i>How can we consume real time Open Data updates<br>in route planner algorithms in an efficient way?</i></h3>
+        <ol>
+            <li class="next"><b>RT data processing</b>: Additional logic is needed.</li>
+            <li class="next"><b>Updates only</b>: Processing only the changes to the data, improves the CPU and bandwidth usage.</li>
+            <li class="next"><b>Faster computation</b>: The user is informed faster about changes to<br>his or her trip.</li>
+        </ol>
+    </section>
+    </section>
+
+    <section class="slide" id="conclusion-4">
+        <h2>Goals</h2>
+        <div class="wrapper3">
+            <div>
+                <ol>
+                    <li>Notifications keep the user informed in real time.</li>
+                    <li class="next">Automatically rerouting using real time data.</li>
+                    <li class="next">Less resources consumed for publishers and consumers.</li>
+                </ol>
+            </div>
+            <div>
+                <img src="images/lcrail-demo.gif" alt="LCRail demo" \>
+            </div>
+        </div>
+        <style>
+            #conclusion-4 img {
+                width: 100%;
+            }
+            #conclusion-4 p {
+                margin: auto;
+                font-weight: bold;
+                color: green;
+            }
+        </style>
+    </section>
+
+    
+
+    <!-- The end: Questions -->
     <section class="slide" id="end">
         <div id="flex-center">
             <h2>Don't miss your connection,<br> use Linked Connections!</h2>
