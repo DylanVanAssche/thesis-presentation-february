@@ -668,10 +668,49 @@ Reroute using CSA (same as planning).</code></pre>
 
     <section class="slide" id="liveboard">
         <h2>High level overview of the Liveboard algorithm</h2>
+        <div class="wrapper10">
+            <div>
+                <ul>
+                    <li><b>Scans each page</b>: In a certain time frame.</li>
+                    <li class="next"><b>URI matching</b>: Creates a list of all connections matching the stop URI.</li>
+                    <li class="next"><b>Previous &amp; next</b>: The user can get the previous and next results. The necessary pages are automatically fetched.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/liveboard.png" alt="Liveboard high level" \>
+            </div>
+        </div>
+        <style>
+            #liveboard img {
+                height: 35vh;
+            }
+        </style>
     </section>
 
     <section class="slide" id="liveboard-updates">
         <h2>Liveboard updates</h2>
+        <div class="wrapper10">
+            <div>
+                <ul>
+                    <li><b>Updated connection</b>: Check if the connection is used in the liveboard.</li>
+                    <li class="next"><b>Affected</b>: Replace the connection. The UI is notified by a Qt signal.</li>
+                    <li class="next"><b>Faster</b>: Less calculations are needed in comparison to CSA.</li>
+                </ul>
+            </div>
+            <div>
+                <img src="images/updating-liveboard-simplified.png" alt="Liveboard high level" \>
+            </div>
+        </div>
+        <style>
+            #liveboard-updates img {
+                height: 40vh;
+            }
+            .wrapper10 {
+                display: grid;
+                grid-template-columns: 65% 30%;
+                gap: 5%;
+            }
+        </style>
     </section>
 
     <section class="slide" id="demo-1">
